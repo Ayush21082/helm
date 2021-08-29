@@ -228,7 +228,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                                             } else {
                                               showDialog(
                                                 context: context,
-                                                child: AlertDialog(
+                                                builder: (context) => AlertDialog(
                                                   title: Text('Oops!'),
                                                   content: Text(
                                                     'You do not have sufficient ${_problem.noun} credits left.',
@@ -281,7 +281,7 @@ class _ChallengeScreenState extends State<ChallengeScreen> {
                   } else {
                     showDialog(
                       context: context,
-                      child: AlertDialog(
+                      builder: (context) => AlertDialog(
                         title: Text('Oops!'),
                         content: Text(
                           'It appears that you have not utilised all your ${_problem.noun} credits yet.',

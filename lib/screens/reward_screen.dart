@@ -178,7 +178,7 @@ class _RewardScreenState extends State<RewardScreen> {
                     } else {
                       showDialog(
                         context: context,
-                        child: AlertDialog(
+                        builder: (context) => AlertDialog(
                           title: Text('Oops!'),
                           content: Text(
                             'Positive reinforcement is important for making a good habit of dealing with ${_problem.noun} in an actionable manner. Please pick a reward!',

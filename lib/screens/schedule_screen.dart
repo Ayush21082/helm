@@ -185,7 +185,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                                         minute: TimeOfDay.now().minute + 5));
                                 showDialog(
                                   context: context,
-                                  child: AlertDialog(
+                                  builder: (context) => AlertDialog(
                                     title: Text('Oops!'),
                                     content: Text(
                                         'Please schedule for a time past $minimumTimeOfDay today.'),
@@ -207,7 +207,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                             } catch (err) {
                               showDialog(
                                 context: context,
-                                child: AlertDialog(
+                                builder: (context) => AlertDialog(
                                   title: Text(
                                     'Oops!',
                                   ),
@@ -276,7 +276,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                       print(err);
                       showDialog(
                         context: context,
-                        child: AlertDialog(
+                        builder: (context) => AlertDialog(
                           title: Text('Oops!'),
                           content: Text('An unexpected error occurred!'),
                           actions: <Widget>[
@@ -292,7 +292,7 @@ class _ScheduleScreenState extends State<ScheduleScreen> {
                   } else {
                     showDialog(
                       context: context,
-                      child: AlertDialog(
+                      builder: (context) => AlertDialog(
                         title: Text('Oops!'),
                         content: Text(
                           'It appears that you\'ve picked a time that is over, please pick another time to check back in with us.',
