@@ -1,4 +1,4 @@
-package com.stonks.helm
+package com.example.helm
 
 import io.flutter.embedding.android.FlutterActivity
 
