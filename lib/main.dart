@@ -38,7 +38,7 @@ void main() async {
         AndroidInitializationSettings('@mipmap/ic_launcher');
     final initializationSettingsIOS = IOSInitializationSettings();
     final initializationSettings = InitializationSettings(
-        initializationSettingsAndroid, initializationSettingsIOS);
+        android: initializationSettingsAndroid, iOS: initializationSettingsIOS);
     await flutterLocalNotificationsPlugin.initialize(
       initializationSettings,
     );
@@ -138,7 +138,7 @@ Future<void> _scheduleNotification(
   final iOSPlatformChannelSpecifics =
       IOSNotificationDetails(sound: 'slow_spring_board.aiff');
   final platformChannelSpecifics = NotificationDetails(
-      androidPlatformChannelSpecifics, iOSPlatformChannelSpecifics);
+      android: androidPlatformChannelSpecifics, iOS: iOSPlatformChannelSpecifics);
   await flutterLocalNotificationsPlugin.schedule(
     0,
     title,

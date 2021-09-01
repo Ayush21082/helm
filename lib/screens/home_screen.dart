@@ -29,7 +29,7 @@ class _HomeScreenState extends State<HomeScreen> {
           })
           .catchError((err) => showDialog(
                 context: context,
-                child: AlertDialog(
+                builder: (context) => AlertDialog(
                   title: Text('Oops!'),
                   content: Text(
                     'An unexpected error occurred when initialising data.',
